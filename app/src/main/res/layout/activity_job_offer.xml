@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobOffer">
+
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider1"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:iss_auto_cycle="false"
+        app:iss_text_align="CENTER"
+        app:iss_placeholder="@drawable/placeholder"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_slider1"
+        android:layout_above="@id/bottom_layout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_rec">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:text="I paint walls"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30dp">
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/des_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_rec">
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+            </TextView>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rating_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/des_rec">
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.3"
+                android:textSize="20dp"
+                ></TextView>
+            ></RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rev_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_rec">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reviews"
+                android:textSize="15dp"
+                android:id="@+id/rev"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/white">
+
+            </Button>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:text="R70 per hpur"
+                android:layout_below="@+id/rev"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="30dp">
+            </TextView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_rec"
+        android:backgroundTint="#1A1A1A"
+        android:id="@+id/bottom_layout">
+
+        <Button
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Message Professional"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/primary">
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>
